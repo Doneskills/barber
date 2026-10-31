@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crown Cuts Barbershop | Port of Spain</title>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1b1013;--panel:#2a171c;--ink:#f5ece4;--muted:#c3aaa0;--brass:#d6a64e;--line:#43262d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6efe8;--panel:#fff;--ink:#2a171c;--muted:#6d5a55;--brass:#9a6b12;--line:#e2d3c6}}
+:root[data-theme="light"]{--bg:#f6efe8;--panel:#fff;--ink:#2a171c;--muted:#6d5a55;--brass:#9a6b12;--line:#e2d3c6}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:"Big Shoulders Display",Impact,sans-serif;text-transform:none;margin:0;line-height:.95}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0}
+.logo{font:900 1.6rem "Big Shoulders Display",sans-serif;text-decoration:none;color:var(--brass)}
+nav a{margin-left:1rem;text-decoration:none;font-weight:600;color:var(--muted)}
+.hero{display:grid;gap:1.6rem;padding:1rem 0 2.5rem}
+h1{font-size:clamp(3.4rem,17vw,7rem);font-weight:900}
+.lead{color:var(--muted);max-width:26rem;font-size:1.1rem;margin:1rem 0 1.4rem}
+.btn{display:inline-block;background:var(--brass);color:#1b1013;padding:.85rem 1.5rem;border-radius:.3rem;font-weight:600;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.show{position:relative;height:20rem;border-radius:.4rem;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.sl{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;opacity:0;transition:opacity .7s}
+.sl.on{opacity:1}
+.sl span{font-size:6rem;line-height:1}
+.sl b{font:700 1.5rem "Big Shoulders Display",sans-serif;color:var(--brass)}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dots{position:absolute;bottom:.8rem;left:0;right:0;display:flex;justify-content:center;gap:.4rem}
+.dots i{width:.55rem;height:.55rem;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--brass)}
+section{padding:2.2rem 0;border-top:1px solid var(--line)}
+section>h2{font-size:2.6rem;margin-bottom:1.2rem}
+.svc{list-style:none;margin:0;padding:0}
+.svc li{display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;padding:1rem 0;border-bottom:1px solid var(--line)}
+.svc .n{font-weight:600;font-size:1.1rem}
+.svc .t{color:var(--muted);font-size:.92rem;grid-row:2}
+.svc .p{font:700 1.7rem "Big Shoulders Display",sans-serif;color:var(--brass);grid-row:1/3;grid-column:2;align-self:center}
+.team{display:grid;gap:1rem}
+.who{display:flex;gap:1rem;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:.4rem;padding:1rem}
+.av{flex:none;width:3.6rem;height:3.6rem;border-radius:50%;background:var(--brass);color:#1b1013;display:flex;align-items:center;justify-content:center;font:900 1.5rem "Big Shoulders Display",sans-serif}
+.who p{margin:0;color:var(--muted);font-size:.95rem}
+.who b{display:block}
+.strip{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.6rem}
+.strip div{flex:none;width:11rem;aspect-ratio:3/4;scroll-snap-align:start;border-radius:.4rem;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;font-weight:600}
+.strip span{font-size:3.5rem;line-height:1}
+.strip img{width:100%;height:100%;object-fit:cover}
+.visit{display:grid;gap:1.2rem}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:.25rem 0;color:var(--muted)}
+.hrs td:last-child{text-align:right;color:var(--ink)}
+.visit h3{font-size:1.7rem;margin-bottom:.5rem}
+.visit p{margin:.2rem 0;color:var(--muted)}
+footer{padding:1.5rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+footer a{margin-right:1rem}
+@media (min-width:44rem){.hero{grid-template-columns:1.1fr 1fr;align-items:center}.team{grid-template-columns:repeat(3,1fr)}.who{flex-direction:column;text-align:center}.visit{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sl{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">Crown Cuts</a><nav><a href="#services">Prices</a><a href="#team">Team</a><a href="#visit">Visit</a></nav></header>
+
+<div class="hero">
+<div>
+<h1>Walk in rough. Walk out sharp.</h1>
+<p class="lead">Fades, line-ups, beard trims and kids cuts in the heart of Port of Spain. Walk-ins welcome, or message to save your spot.</p>
+<div class="cta"><a class="btn" href="https://wa.me/18680000000?text=Hi%20Crown%20Cuts%2C%20I%27d%20like%20to%20book%20a%20cut.">Book on WhatsApp</a><a class="btn alt" href="https://maps.google.com/?q=Port+of+Spain+Trinidad">Get directions</a></div>
+</div>
+<div class="show" aria-label="Photos of our work">
+<div class="sl on"><span>💈</span><b>Classic fade</b></div>
+<div class="sl"><span>✂️</span><b>Sharp line-up</b></div>
+<div class="sl"><span>🧔</span><b>Beard sculpt</b></div>
+<div class="sl"><span>👦</span><b>Kids cuts</b></div>
+<div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+</div>
+</div>
+
+<section id="services">
+<h2>Cuts and prices</h2>
+<ul class="svc">
+<li><span class="n">Haircut and fade</span><span class="t">About 30 minutes</span><span class="p">TT$60</span></li>
+<li><span class="n">Line-up only</span><span class="t">About 15 minutes</span><span class="p">TT$30</span></li>
+<li><span class="n">Beard trim and shape</span><span class="t">About 20 minutes</span><span class="p">TT$40</span></li>
+<li><span class="n">Cut and beard combo</span><span class="t">About 45 minutes</span><span class="p">TT$90</span></li>
+<li><span class="n">Kids cut (under 12)</span><span class="t">About 25 minutes</span><span class="p">TT$45</span></li>
+</ul>
+</section>
+
+<section id="team">
+<h2>Meet the barbers</h2>
+<div class="team">
+<div class="who"><div class="av">K</div><div><b>Kevon</b><p>Fades and designs, 8 years behind the chair</p></div></div>
+<div class="who"><div class="av">R</div><div><b>Ricardo</b><p>Beard work and hot-towel shaves</p></div></div>
+<div class="who"><div class="av">D</div><div><b>Dion</b><p>Kids cuts and classic tapers</p></div></div>
+</div>
+</section>
+
+<section id="work">
+<h2>Recent cuts</h2>
+<div class="strip">
+<div><span>💈</span>Skin fade</div><div><span>✂️</span>Taper</div><div><span>🧔</span>Beard shape</div><div><span>👦</span>Kids style</div><div><span>🔥</span>Design line</div>
+</div>
+</section>
+
+<section id="visit">
+<h2>Find the shop</h2>
+<div class="visit">
+<div><h3>Hours</h3><table class="hrs">
+<tr><td>Mon to Fri</td><td>9 a.m. to 7 p.m.</td></tr>
+<tr><td>Saturday</td><td>8 a.m. to 6 p.m.</td></tr>
+<tr><td>Sunday</td><td>Closed</td></tr></table></div>
+<div><h3>Where</h3><p>8 Example Street, Port of Spain</p><p>Call or WhatsApp: (868) 000-0000</p><p><a class="btn" style="margin-top:.6rem" href="https://maps.google.com/?q=Port+of+Spain+Trinidad">Get directions</a></p></div>
+</div>
+</section>
+</div>
+<footer><div class="wrap"><a href="https://instagram.com/">Instagram</a><a href="https://facebook.com/">Facebook</a><p>Sample site made to show what a local business page can look like.</p></div></footer>
+<script src="photos-list.js"></script>
+<script src="photos.js"></script>
+<script>
+(function(){var s=document.querySelectorAll('.sl'),d=document.querySelectorAll('.dots i'),i=0;setInterval(function(){s[i].classList.remove('on');d[i].classList.remove('on');i=(i+1)%s.length;s[i].classList.add('on');d[i].classList.add('on')},5000)})();
+</script>
+</body>
+</html>
